@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:rongcloud_im_plugin/rongcloud_im_plugin.dart' as RongCloud;
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(MyApp());
+  RongCloud.RongIMClient.init("cpj2xarlctx9n");
 }
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+
+  void _init() {}
+
   @override
   Widget build(BuildContext context) {
+    _init();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
